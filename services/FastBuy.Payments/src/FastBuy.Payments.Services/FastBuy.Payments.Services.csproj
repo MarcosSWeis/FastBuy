@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Consumers\CreatePaymentEventConsumer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="fastbuy.orders.contracts" Version="1.0.3" />
+    <PackageReference Include="FastBuy.Shared.Library" Version="1.0.9" />
+    <PackageReference Include="FastBuy.Stocks.Contracs" Version="1.0.1" />
+    <PackageReference Include="masstransit" Version="8.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FastBuy.Payments.Contracts\FastBuy.Payments.Contracts.csproj" />
+    <ProjectReference Include="..\FastBuy.Payments.Entities\FastBuy.Payments.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

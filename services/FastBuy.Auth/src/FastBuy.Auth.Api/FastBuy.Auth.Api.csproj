@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>b7afe7f3-ed59-4370-bd73-28a25a263d10</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="duende.identityserver" Version="7.2.0" />
+    <PackageReference Include="duende.identityserver.aspnetidentity" Version="7.2.0" />
+    <PackageReference Include="FastBuy.shared.library" Version="1.0.6" />
+    <PackageReference Include="microsoft.aspnetcore.identity.entityframeworkcore" Version="9.0.3" />
+    <PackageReference Include="microsoft.aspnetcore.identity.ui" Version="9.0.3" />
+    <PackageReference Include="microsoft.entityframeworkcore.design" Version="9.0.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="9.0.3" />
+    <PackageReference Include="microsoft.entityframeworkcore.tools" Version="9.0.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+    <PackageReference Include="swashbuckle.aspnetcore" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

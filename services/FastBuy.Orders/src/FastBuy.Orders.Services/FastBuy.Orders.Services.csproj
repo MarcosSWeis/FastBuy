@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FastBuy.products.contracts" Version="1.0.2" />
+    <PackageReference Include="FastBuy.Stocks.Contracs" Version="1.0.1" />
+    <PackageReference Include="masstransit" Version="8.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FastBuy.Orders.Contracts\FastBuy.Orders.Contracts.csproj" />
+    <ProjectReference Include="..\FastBuy.Orders.Entities\FastBuy.Orders.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,20 @@
+services:
+    mongo:
+        # Un contenedor llamado "mongo"
+        image: mongo:7.0 # Imagen de MongoDB
+        ports:
+            - "27017:27017" # Mapear puerto local a puerto del contenedor (host:contenedor)
+        volumes:
+            - mongodbdata:/data/db # Volumen persistente para la base de datos
+    rabbitmq:
+        image: rabbitmq:management # de doende obtien la imagen
+        container_name: rabbitmq # como se va a llamar la imagen
+        ports:
+            - 5672:5672 # puerto prinecipal  de comunicacion de rabbitmq protocolo AMPQ (por aca viajan los mensajes)
+            - 15672:15672 # puerto para el cliente web de rabbitmq (dashboard)
+        volumes:
+            - rabbitmqdata:/var/lib/rabbitmq
+        hostname: rabbitmq
+volumes:
+    mongodbdata: # Definición del volumen persistente
+    rabbitmqdata: # para persistir la data de rabbitmq cuando se reinicia el contenedor

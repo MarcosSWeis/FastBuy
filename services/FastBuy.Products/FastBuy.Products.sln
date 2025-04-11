@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBuy.Products.Api", "src\FastBuy.Products.Api\FastBuy.Products.Api.csproj", "{142CFDC0-65DB-4545-9614-10C368FF561C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBuy.Products.Contracts", "src\FastBuy.Products.Contracts\FastBuy.Products.Contracts.csproj", "{9DC50569-2602-4FCE-BB6F-0A5FC49C3B79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBuy.Products.Entities", "src\FastBuy.Products.Entities\FastBuy.Products.Entities.csproj", "{B5B5A88C-E217-4A15-AB86-1D8899361B88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBuy.Products.Repositories", "src\FastBuy.Products.Repositories\FastBuy.Products.Repositories.csproj", "{1ABD29EB-5788-4AD9-9650-49E136BD26CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBuy.Products.Services", "src\FastBuy.Products.Services\FastBuy.Products.Services.csproj", "{81B05574-E874-4EA6-9B95-BBDFEB038B61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36D7150C-CAD6-48D0-8A88-19E7AD12A7C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{142CFDC0-65DB-4545-9614-10C368FF561C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142CFDC0-65DB-4545-9614-10C368FF561C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142CFDC0-65DB-4545-9614-10C368FF561C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142CFDC0-65DB-4545-9614-10C368FF561C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DC50569-2602-4FCE-BB6F-0A5FC49C3B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DC50569-2602-4FCE-BB6F-0A5FC49C3B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DC50569-2602-4FCE-BB6F-0A5FC49C3B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DC50569-2602-4FCE-BB6F-0A5FC49C3B79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5B5A88C-E217-4A15-AB86-1D8899361B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B5A88C-E217-4A15-AB86-1D8899361B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B5A88C-E217-4A15-AB86-1D8899361B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B5A88C-E217-4A15-AB86-1D8899361B88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ABD29EB-5788-4AD9-9650-49E136BD26CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ABD29EB-5788-4AD9-9650-49E136BD26CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ABD29EB-5788-4AD9-9650-49E136BD26CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ABD29EB-5788-4AD9-9650-49E136BD26CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B05574-E874-4EA6-9B95-BBDFEB038B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B05574-E874-4EA6-9B95-BBDFEB038B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B05574-E874-4EA6-9B95-BBDFEB038B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B05574-E874-4EA6-9B95-BBDFEB038B61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{142CFDC0-65DB-4545-9614-10C368FF561C} = {36D7150C-CAD6-48D0-8A88-19E7AD12A7C5}
+		{9DC50569-2602-4FCE-BB6F-0A5FC49C3B79} = {36D7150C-CAD6-48D0-8A88-19E7AD12A7C5}
+		{B5B5A88C-E217-4A15-AB86-1D8899361B88} = {36D7150C-CAD6-48D0-8A88-19E7AD12A7C5}
+		{1ABD29EB-5788-4AD9-9650-49E136BD26CE} = {36D7150C-CAD6-48D0-8A88-19E7AD12A7C5}
+		{81B05574-E874-4EA6-9B95-BBDFEB038B61} = {36D7150C-CAD6-48D0-8A88-19E7AD12A7C5}
+	EndGlobalSection
+EndGlobal
