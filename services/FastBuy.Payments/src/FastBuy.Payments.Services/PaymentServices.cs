@@ -41,22 +41,38 @@ namespace FastBuy.Payments.Services
                 CreatedAt = DateTimeOffset.UtcNow
             };
 
-            bool success = new PaymentProcessor().Procesar(order.Amount);
+            PaymentStatus statusPayment = new PaymentProcessor().Procesar(order.Amount);
 
-            // Simulación del pago 
-            if (success)
+            bool status = false;
+
+            switch (statusPayment)
             {
-                payment.Status = PaymentStatus.Completed.ToString();
-                await paymenttRepository.CreateAsync(payment);
-                await publishEndpoint.Publish(new PaymentSucceeded(order.Id,order.CorrelationId));
-                return true;
-            } else
-            {
-                payment.Status = PaymentStatus.Rejected.ToString();
-                await paymenttRepository.CreateAsync(payment);
-                await publishEndpoint.Publish(new PaymentFailed(order.Id,order.CorrelationId,"Pago rechazado"));
-                return false;
+                case PaymentStatus.Completed:
+                {
+                    payment.Status = statusPayment.ToString();
+                    await paymenttRepository.CreateAsync(payment);
+                    await publishEndpoint.Publish(new PaymentSucceeded(order.Id,order.CorrelationId));
+                    status = true;
+                    break;
+                }
+
+                case PaymentStatus.Rejected:
+                {
+                    payment.Status = statusPayment.ToString();
+                    await paymenttRepository.CreateAsync(payment);
+                    await publishEndpoint.Publish(new PaymentFailed(order.Id,order.CorrelationId,$"The payment status is {payment.Status}"));
+                    break;
+                }
+                default:
+                {
+                    payment.Status = statusPayment.ToString();
+                    await paymenttRepository.CreateAsync(payment);
+                    await publishEndpoint.Publish(new PaymentFailed(order.Id,order.CorrelationId,$"The payment status is {payment.Status}"));
+                    break;
+                }
             }
+
+            return status;
 
         }
     }
